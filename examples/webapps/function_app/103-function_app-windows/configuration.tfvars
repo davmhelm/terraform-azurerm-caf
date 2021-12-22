@@ -1,21 +1,19 @@
 global_settings = {
   default_region = "region1"
   regions = {
-    region1 = "southeastasia"
+    region1 = "eastus2"
   }
 }
 
 resource_groups = {
   rg1 = {
-    name   = "funapp-private"
-    region = "region1"
+    name = "example-function-app-rg1"
   }
 }
 
-
 storage_accounts = {
   sa1 = {
-    name                     = "functionsapptestsa"
+    name                     = "dmhfunctionsapptestsa"
     resource_group_key       = "rg1"
     region                   = "region1"
     account_tier             = "Standard"
@@ -39,7 +37,7 @@ app_service_plans = {
 
 function_apps = {
   faaps1 = {
-    name                 = "test-azure-functions"
+    name                 = "dmh-test-azure-functions"
     resource_group_key   = "rg1"
     region               = "region1"
     app_service_plan_key = "asp1"
